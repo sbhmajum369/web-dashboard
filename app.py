@@ -16,6 +16,9 @@ fig = px.bar(df, x=Col1, y=[Col2,Col3,Col4], barmode="group")
 # fig.show()
 df2 = pd.read_excel(r'Live Data.xlsx', sheet_name='Sheet7')
 
+app = dash.Dash(__name__)
+server=app.server
+
 app.layout = html.Div(style={
 	'background-image': 'url("/assets/covid.jpeg")',
 	'background-size': '1500px 800px'
