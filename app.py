@@ -17,10 +17,8 @@ fig = px.bar(df, x=Col1, y=[Col2,Col3,Col4], barmode="group")
 df2 = pd.read_excel(r'Live Data.xlsx', sheet_name='Sheet7')
 
 app.layout = html.Div(style={
-	'backgroundImage': 'url("/assets/covid.jpeg")',
-	# 'background-repeat': 'no-repeat',
-	# 'background-position': 'center middle',
-	'background-size': '1500px 800px'#'1920px 1080px'
+	'background-image': 'url("/assets/covid.jpeg")',
+	'background-size': '1500px 800px'
 	},children=[
 	html.H1(
 		children='COVID-19 Dashboard',
@@ -66,5 +64,5 @@ app.layout = html.Div(style={
 
 
 if __name__ == '__main__':
-	app.run_server(host='0.0.0.0',port=8090,debug=True)
+	app.run_server(port=8090,debug=True)
 
